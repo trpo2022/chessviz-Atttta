@@ -73,11 +73,6 @@ void Print_board(char a[Height][Widths]){
 int main() {
   char board[Height][Widths];
   Start_position(board);
-  for (int y = 0; y < Height; y++) {
-    for (int x = 0; x < Widths; x++) {
-      printf(" %c", board[y][x]);
-    }
-    printf("\n \n");
-  }
+  Print_board(board);
   return 0;
 }
