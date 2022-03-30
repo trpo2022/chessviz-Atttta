@@ -59,9 +59,9 @@ void Start_position(char a[Height][Widths]) {
 
 void Print_board(char a[Height][Widths]){
 	int num=1;
-	for(int y=0;y<8;y++){
+	for(int y=0;y<Height;y++){
 		printf("%d",num);
-		for(int x=0;x<8;x++){
+		for(int x=0;x<Widths;x++){
 			printf(" %c",a[y][x]);
 		}
 		num++; printf("\n");
