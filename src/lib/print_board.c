@@ -7,7 +7,8 @@
 void Print_board(char a[Height][Widths], int hod)
 {
     int num = 1;
-    if(hod!=0) printf(" %d. \n",hod);
+    if (hod != 0)
+        printf(" %d. \n", hod);
     for (int y = 0; y < Height; y++) {
         printf("%d", num);
         for (int x = 0; x < Widths; x++) {
