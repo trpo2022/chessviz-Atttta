@@ -39,7 +39,7 @@ CTEST(move, move_error)
     ASSERT_EQUAL(error, end);
 }
 
-CTEST(move, check_rule_error)
+CTEST(check_rule, check_rule_error)
 {
     char board[8][8];
     Start_position(board);
@@ -50,7 +50,7 @@ CTEST(move, check_rule_error)
     ASSERT_EQUAL(need_result, result);
 }
 
-CTEST(move, check_rule_no_error)
+CTEST(check_rule, check_rule_no_error)
 {
     char board[8][8];
     Start_position(board);
