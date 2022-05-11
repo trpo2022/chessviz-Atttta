@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <lib/check_rule.h>
 #include <lib/move_fig.h>
 #include <lib/print_board.h>
 #include <lib/start_position.h>
@@ -18,6 +19,10 @@ int main()
     int x = 0, y = 0, x1 = 0, y1 = 0, end = 0, mode = 0, player_turn = 0;
     while (end == 0) {
         write_read(&x, &y, &x1, &y1, &end, &mode);
+        if (end == 666) {
+            printf("\n \n End game. \n \n");
+            break;
+        }
         if ((board[y][x] == 'r' || board[y][x] == 'n' || board[y][x] == 'b'
              || board[y][x] == 'q' || board[y][x] == 'k' || board[y][x] == 'p')
             && (player_turn == 0 || player_turn == 2))
@@ -32,6 +37,7 @@ int main()
             printf("\n Broken sequence moves. \n");
             end += 2;
         }
+        end = check_rule(x, y, x1, y1, board[y][x], board[y1][x1], mode);
         move_fig(board, &mode, x, y, x1, y1, &end);
         Print_board(board, hod);
         step += 1;
