@@ -1,0 +1,11 @@
+*.d
+*.a
+*.o
+*.exe
+*.swp
+*.so
+*~
+
+test
+Chess
+chess
