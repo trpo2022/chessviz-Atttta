@@ -21,7 +21,8 @@ void write_read(int* x, int* y, int* xx, int* yy, int* ex, int* mode)
             printf(" Error write. \n");
             break;
         } else if (input[0] == '#') {
-            *ex += 2;
+            *ex = 666;
+            break;
         }
         if (input[symbol] == '-') {
             second = 1;
